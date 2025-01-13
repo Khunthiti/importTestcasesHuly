@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-02T16:45:38.955761" rpa="false" schemaversion="5">
+<suite id="s1" name="Datadriver" source="c:\Robot\futureskill_Project-main\testcases\datadriver.robot">
+<kw name="Setup Browser" type="SETUP">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${REMOTE_URL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-02T16:45:39.686286" elapsed="0.000662"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-02T16:45:39.687156" elapsed="0.000404"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-02T16:45:39.688221" level="INFO">Opening browser 'chrome' to base url 'https://huly.incubate.apps.changan.co.th/workbench/changan/testManagement' through remote server at 'http://127.0.0.1:9222'.</msg>
+<msg time="2025-01-02T16:45:39.697867" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-02T16:45:39.698105" level="FAIL">TypeError: object of type 'int' has no len()</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-01-02T16:45:39.687874" elapsed="0.013354">TypeError: object of type 'int' has no len()</status>
+</kw>
+<status status="FAIL" start="2025-01-02T16:45:39.685697" elapsed="0.015802">TypeError: object of type 'int' has no len()</status>
+</kw>
+<test id="s1-t1" name="Verify Create Test Cases" line="20">
+<status status="FAIL" start="2025-01-02T16:45:39.701639" elapsed="0.000903">Parent suite setup failed:
+TypeError: object of type 'int' has no len()</status>
+</test>
+<test id="s1-t2" name="Verify Create Test Cases" line="20">
+<status status="FAIL" start="2025-01-02T16:45:39.704133" elapsed="0.000891">Parent suite setup failed:
+TypeError: object of type 'int' has no len()</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-02T16:45:39.705999" elapsed="0.000187"/>
+</kw>
+<doc>DataDriver Testing with Excel</doc>
+<status status="FAIL" start="2025-01-02T16:45:38.958584" elapsed="0.747677">Suite setup failed:
+TypeError: object of type 'int' has no len()</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Datadriver">Datadriver</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-02T16:45:39.703724" level="WARN">Multiple tests with name 'Verify Create Test Cases' executed in suite 'Datadriver'.</msg>
+</errors>
+</robot>

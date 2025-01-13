@@ -1,0 +1,14 @@
+1735893992522	geckodriver	INFO	Listening on 127.0.0.1:54680
+1735893995664	mozrunner::runner	INFO	Running command: "C:\\Users\\Thiti\\.cache\\selenium\\firefox\\win64\\133.0.3\\firefox.exe" "--marionette" "--remote-debuggin ... 1" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Thiti\\AppData\\Local\\Temp\\rust_mozprofileKVr9EJ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1735893996661	Marionette	INFO	Marionette enabled
+1735893996758	Marionette	INFO	Listening on port 54691
+WebDriver BiDi listening on ws://127.0.0.1:54681
+Read port: 54691
+1735893996876	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54681/devtools/browser/d592ea88-993f-48b5-8ada-4bd604447e9d
+1735894004807	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1735894005007	Marionette	INFO	Stopped listening on port 54691
+Dynamically enable window occlusion 1
