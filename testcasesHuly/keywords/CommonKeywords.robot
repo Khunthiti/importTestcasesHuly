@@ -5,15 +5,6 @@ Wait until element is ready then click element
     [Arguments]    ${locator}
     Wait Until Keyword Succeeds    5x    2s    Click Element    ${locator}
 
-Sleep for Login
-    Sleep     30
-
-Sleep for contain element
-    Sleep    5
-
-Input the data for create test cases
-    [Arguments]     ${testcase_topic}    ${testcase_precondition}    ${testcase_steps}    ${testcase_expected}
-
 Wait until element is ready
     [Arguments]     ${locator}
     Sleep     3
@@ -35,17 +26,6 @@ Click element tag
     [Arguments]     ${element}
     Click Element	${element}
 
-Enter Title
+Enter Text
     [Arguments]    ${locator}    ${text}
     Input Text     ${locator}    ${text}
-
-Enter Description
-    [Arguments]   ${locator}    ${text} 
-    Input Text    ${locator}    ${text}
-
-Read All The Data
-    [Arguments]     ${testcase_title}    ${testcase_description}
-    Log To Console    ${testcase_title} : ${testcase_description}
-    Input Text      ${title}    ${testcase_title}
-    Input Text      ${desc}    ${testcase_description}
-    Click Element   ${createbtn}

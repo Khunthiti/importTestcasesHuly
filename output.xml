@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-16T09:09:45.293841" rpa="false" schemaversion="5">
+<suite id="s1" name="importTestcases" source="c:\Users\Thiti\Documents\GitHub\importTestcasesHuly\testcasesHuly\testcases\importTestcases.robot">
+<kw name="Setup Browser" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-16T09:09:46.117307" level="INFO">${ChromeOptions} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000024BF010E660&gt;</msg>
+<var>${ChromeOptions}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys,selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-16T09:09:46.116610" elapsed="0.003534"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${ChromeOptions}</arg>
+<arg>add_experimental_option</arg>
+<arg>debuggerAddress</arg>
+<arg>127.0.0.1:9289</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-16T09:09:46.120400" elapsed="0.000360"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:46.121429" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${ChromeOptions}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-01-16T09:09:46.121182" elapsed="0.729533"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:46.851144" level="INFO">Opening url 'https://huly.incubate.apps.changan.co.th/workbench/it/testManagement/677e18a510ffbb18b65bf7b8/library?attachedTo=677e27420fcfb423a1c1cf93'</msg>
+<arg>${baseUrl}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-16T09:09:46.850947" elapsed="0.722117"/>
+</kw>
+<kw name="Wait until page contains element then verify text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:47.809559" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-16T09:09:47.809873" level="FAIL">Page should have contained text 'Test Management' but did not.</msg>
+<arg>${expected_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-01-16T09:09:47.574048" elapsed="0.238282">Page should have contained text 'Test Management' but did not.</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:49.832396" level="INFO">Current page contains text 'Test Management'.</msg>
+<arg>${expected_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-01-16T09:09:49.813634" elapsed="0.018918"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain</arg>
+<arg>${expected_text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-01-16T09:09:47.573786" elapsed="2.258857"/>
+</kw>
+<arg>${expected_text}</arg>
+<status status="PASS" start="2025-01-16T09:09:47.573423" elapsed="2.259298"/>
+</kw>
+<status status="PASS" start="2025-01-16T09:09:46.115440" elapsed="3.717357"/>
+</kw>
+<test id="s1-t1" name="Data-Driven Test Case" line="11">
+<kw name="Create Test via automate">
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:49.835025" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:49.834719" elapsed="0.074164"/>
+</kw>
+<arg>xpath=//span[text()='New test case']</arg>
+<status status="PASS" start="2025-01-16T09:09:49.834467" elapsed="0.074619"/>
+</kw>
+<kw name="Enter Text" owner="CommonKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:49.909799" level="INFO">Typing text 'TC-001: To verify the allocation of Compensatory Leave from OT in the case of the first time in the year(2025).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:49.909600" elapsed="0.218958"/>
+</kw>
+<arg>${titleD}</arg>
+<arg>${testcase_title}</arg>
+<status status="PASS" start="2025-01-16T09:09:49.909274" elapsed="0.219484"/>
+</kw>
+<kw name="Enter Text" owner="CommonKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:50.129441" level="INFO">Typing text 'Pre-condition
+- Existing OT(Current Period 2025) in Approved status and Request type = Compensatory Leave.
+
+Teststep Description
+HR
+1. Click Time Off menu
+2. Click Mass Leaves Allocation
+3. Click Allocate Compensatory Leave
+4. Click Add a line for select the employee
+5. Click Allocate Compensatory Leave
+
+Employee, OT requester
+6. Click ESS menu.
+7. Click Leave Request.
+8. Click New
+9. Verify Time Off Type * Compensatory leave
+
+Expected Result
+HR
+4. The system will show the list of employees with OT in Approved status and Request type = Compensatory Leave.
+5. The system will create a new Mass Leave Allocation named Compensatory Leave 2025.
+
+Employee, OT requester
+9. The total value of Compensatory Leave is updated depending on OT hours.' into text field 'xpath=//p[@class='is-empty is-editor-empty']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:50.129256" elapsed="1.006822"/>
+</kw>
+<arg>${descD}</arg>
+<arg>${testcase_description}</arg>
+<status status="PASS" start="2025-01-16T09:09:50.128949" elapsed="1.007419"/>
+</kw>
+<kw name="Wait until page contain element tag" owner="CommonKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${tagxpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-16T09:09:51.137167" elapsed="0.032598"/>
+</kw>
+<arg>${statusTestcase}</arg>
+<status status="PASS" start="2025-01-16T09:09:51.136669" elapsed="0.033339"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:51.170881" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:51.170643" elapsed="0.046345"/>
+</kw>
+<arg>${statusTestcase}</arg>
+<status status="PASS" start="2025-01-16T09:09:51.170258" elapsed="0.046994"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:51.218261" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:51.218000" elapsed="0.048594"/>
+</kw>
+<arg>${selectStatus}</arg>
+<status status="PASS" start="2025-01-16T09:09:51.217548" elapsed="0.049331"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:51.267885" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:51.267606" elapsed="0.043338"/>
+</kw>
+<arg>${createbtn}</arg>
+<status status="PASS" start="2025-01-16T09:09:51.267156" elapsed="0.044023"/>
+</kw>
+<arg>testcase_title=TC-001: To verify the allocation of Compensatory Leave from OT in the case of the first time in the year(2025).</arg>
+<arg>testcase_description=Pre-condition
+- Existing OT(Current Period 2025) in Approved status and Request type = Compensatory Leave.
+
+Teststep Description
+HR
+1. Click Time Off menu
+2. Click Mass Leaves Allocation
+3. Click Allocate Compensatory Leave
+4. Click Add a line for select the employee
+5. Click Allocate Compensatory Leave
+
+Employee, OT requester
+6. Click ESS menu.
+7. Click Leave Request.
+8. Click New
+9. Verify Time Off Type * Compensatory leave
+
+Expected Result
+HR
+4. The system will show the list of employees with OT in Approved status and Request type = Compensatory Leave.
+5. The system will create a new Mass Leave Allocation named Compensatory Leave 2025.
+
+Employee, OT requester
+9. The total value of Compensatory Leave is updated depending on OT hours.</arg>
+<status status="PASS" start="2025-01-16T09:09:49.834124" elapsed="1.477492"/>
+</kw>
+<doc>สร้าง Test Case จากข้อมูลใน Excel</doc>
+<status status="PASS" start="2025-01-16T09:09:49.832887" elapsed="1.479348"/>
+</test>
+<test id="s1-t2" name="Data-Driven Test Case" line="11">
+<kw name="Create Test via automate">
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:51.317675" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:51.317299" elapsed="0.124146"/>
+</kw>
+<arg>xpath=//span[text()='New test case']</arg>
+<status status="PASS" start="2025-01-16T09:09:51.316870" elapsed="0.124766"/>
+</kw>
+<kw name="Enter Text" owner="CommonKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:51.442417" level="INFO">Typing text 'TC-002: To verify the allocation of Compensatory Leave from OT in the case of the second time onward in the year(2025).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:51.442118" elapsed="0.154529"/>
+</kw>
+<arg>${titleD}</arg>
+<arg>${testcase_title}</arg>
+<status status="PASS" start="2025-01-16T09:09:51.441829" elapsed="0.155653"/>
+</kw>
+<kw name="Enter Text" owner="CommonKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:51.598711" level="INFO">Typing text 'Pre-condition
+- Existing OT(Current Period 2025) in Approved status and Request type = Compensatory Leave.
+- Need to continue from TC-001
+
+Teststep Description
+HR process in secon time continue from TC-001
+1. Click Time Off menu
+2. Click Mass Leaves Allocation
+3. Click Allocate Compensatory Leave
+4. Click Add a line for select the employee
+5. Click Allocate Compensatory Leave
+
+Employee, OT requester
+6. Click ESS menu.
+7. Click Leave Request.
+8. Click New
+9. Verify Time Off Type * Compensatory leave
+
+Expected Result
+HR
+4. The system will show the list of employees with OT in Approved status and Request type = Compensatory Leave.
+5. The system will not create a new Mass Leave Allocation. The system will add name into existing Mass Leave Allocation(Compensatory Leave 2025).
+
+Employee, OT requester
+9. The total value of Compensatory Leave is updated depending on OT hours.' into text field 'xpath=//p[@class='is-empty is-editor-empty']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:51.598439" elapsed="1.145257"/>
+</kw>
+<arg>${descD}</arg>
+<arg>${testcase_description}</arg>
+<status status="PASS" start="2025-01-16T09:09:51.597921" elapsed="1.146076"/>
+</kw>
+<kw name="Wait until page contain element tag" owner="CommonKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${tagxpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-16T09:09:52.745220" elapsed="0.015487"/>
+</kw>
+<arg>${statusTestcase}</arg>
+<status status="PASS" start="2025-01-16T09:09:52.744553" elapsed="0.016391"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:52.761862" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:52.761627" elapsed="0.043409"/>
+</kw>
+<arg>${statusTestcase}</arg>
+<status status="PASS" start="2025-01-16T09:09:52.761210" elapsed="0.044062"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:52.806418" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:52.806153" elapsed="0.043489"/>
+</kw>
+<arg>${selectStatus}</arg>
+<status status="PASS" start="2025-01-16T09:09:52.805514" elapsed="0.044420"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:52.851016" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:52.850748" elapsed="0.035629"/>
+</kw>
+<arg>${createbtn}</arg>
+<status status="PASS" start="2025-01-16T09:09:52.850290" elapsed="0.036418"/>
+</kw>
+<arg>testcase_title=TC-002: To verify the allocation of Compensatory Leave from OT in the case of the second time onward in the year(2025).</arg>
+<arg>testcase_description=Pre-condition
+- Existing OT(Current Period 2025) in Approved status and Request type = Compensatory Leave.
+- Need to continue from TC-001
+
+Teststep Description
+HR process in secon time continue from TC-001
+1. Click Time Off menu
+2. Click Mass Leaves Allocation
+3. Click Allocate Compensatory Leave
+4. Click Add a line for select the employee
+5. Click Allocate Compensatory Leave
+
+Employee, OT requester
+6. Click ESS menu.
+7. Click Leave Request.
+8. Click New
+9. Verify Time Off Type * Compensatory leave
+
+Expected Result
+HR
+4. The system will show the list of employees with OT in Approved status and Request type = Compensatory Leave.
+5. The system will not create a new Mass Leave Allocation. The system will add name into existing Mass Leave Allocation(Compensatory Leave 2025).
+
+Employee, OT requester
+9. The total value of Compensatory Leave is updated depending on OT hours.</arg>
+<status status="PASS" start="2025-01-16T09:09:51.316137" elapsed="1.570934"/>
+</kw>
+<doc>สร้าง Test Case จากข้อมูลใน Excel</doc>
+<status status="PASS" start="2025-01-16T09:09:51.313439" elapsed="1.574145"/>
+</test>
+<test id="s1-t3" name="Data-Driven Test Case" line="11">
+<kw name="Create Test via automate">
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:52.891225" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:52.890998" elapsed="0.114378"/>
+</kw>
+<arg>xpath=//span[text()='New test case']</arg>
+<status status="PASS" start="2025-01-16T09:09:52.890629" elapsed="0.115052"/>
+</kw>
+<kw name="Enter Text" owner="CommonKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:53.007014" level="INFO">Typing text 'TC-003: To verify the allocation of Compensatory Leave from OT in the case of the first time in the year(2026).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:53.006474" elapsed="0.148456"/>
+</kw>
+<arg>${titleD}</arg>
+<arg>${testcase_title}</arg>
+<status status="PASS" start="2025-01-16T09:09:53.005963" elapsed="0.149164"/>
+</kw>
+<kw name="Enter Text" owner="CommonKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:53.155766" level="INFO">Typing text 'Pre-condition
+- Existing OT(Future Period 2026) in Approved status and Request type = Compensatory Leave.
+
+Teststep Description
+HR
+1. Click Time Off menu
+2. Click Mass Leaves Allocation
+3. Click Allocate Compensatory Leave
+4. Click Add a line for select the employee
+5. Click Allocate Compensatory Leave
+
+Employee, OT requester
+6. Click ESS menu.
+7. Click Leave Request.
+8. Click New
+9. Verify Time Off Type * Compensatory leave
+
+Expected Result
+HR
+4. The system will show the list of employees with OT in Approved status and Request type = Compensatory Leave.
+5. The system will create a new Mass Leave Allocation named Compensatory Leave 2025.
+
+Employee, OT requester
+9. The total value of Compensatory Leave is updated depending on OT hours.' into text field 'xpath=//p[@class='is-empty is-editor-empty']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:53.155603" elapsed="0.999646"/>
+</kw>
+<arg>${descD}</arg>
+<arg>${testcase_description}</arg>
+<status status="PASS" start="2025-01-16T09:09:53.155297" elapsed="1.000208"/>
+</kw>
+<kw name="Wait until page contain element tag" owner="CommonKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${tagxpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-16T09:09:54.156191" elapsed="0.013424"/>
+</kw>
+<arg>${statusTestcase}</arg>
+<status status="PASS" start="2025-01-16T09:09:54.155766" elapsed="0.014152"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:54.170895" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:54.170657" elapsed="0.044739"/>
+</kw>
+<arg>${statusTestcase}</arg>
+<status status="PASS" start="2025-01-16T09:09:54.170210" elapsed="0.045492"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:54.217182" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:54.216877" elapsed="0.040796"/>
+</kw>
+<arg>${selectStatus}</arg>
+<status status="PASS" start="2025-01-16T09:09:54.216240" elapsed="0.041666"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:54.258767" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:54.258539" elapsed="0.076469"/>
+</kw>
+<arg>${createbtn}</arg>
+<status status="PASS" start="2025-01-16T09:09:54.258153" elapsed="0.077093"/>
+</kw>
+<arg>testcase_title=TC-003: To verify the allocation of Compensatory Leave from OT in the case of the first time in the year(2026).</arg>
+<arg>testcase_description=Pre-condition
+- Existing OT(Future Period 2026) in Approved status and Request type = Compensatory Leave.
+
+Teststep Description
+HR
+1. Click Time Off menu
+2. Click Mass Leaves Allocation
+3. Click Allocate Compensatory Leave
+4. Click Add a line for select the employee
+5. Click Allocate Compensatory Leave
+
+Employee, OT requester
+6. Click ESS menu.
+7. Click Leave Request.
+8. Click New
+9. Verify Time Off Type * Compensatory leave
+
+Expected Result
+HR
+4. The system will show the list of employees with OT in Approved status and Request type = Compensatory Leave.
+5. The system will create a new Mass Leave Allocation named Compensatory Leave 2025.
+
+Employee, OT requester
+9. The total value of Compensatory Leave is updated depending on OT hours.</arg>
+<status status="PASS" start="2025-01-16T09:09:52.890179" elapsed="1.445205"/>
+</kw>
+<doc>สร้าง Test Case จากข้อมูลใน Excel</doc>
+<status status="PASS" start="2025-01-16T09:09:52.888670" elapsed="1.447300"/>
+</test>
+<test id="s1-t4" name="Data-Driven Test Case" line="11">
+<kw name="Create Test via automate">
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:54.339946" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:54.339688" elapsed="0.277116"/>
+</kw>
+<arg>xpath=//span[text()='New test case']</arg>
+<status status="PASS" start="2025-01-16T09:09:54.339329" elapsed="0.277746"/>
+</kw>
+<kw name="Enter Text" owner="CommonKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:54.618066" level="INFO">Typing text 'TC-004: To verify the allocation of Compensatory Leave from OT in the case of the second time onward in the year(2026).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:54.617800" elapsed="0.154551"/>
+</kw>
+<arg>${titleD}</arg>
+<arg>${testcase_title}</arg>
+<status status="PASS" start="2025-01-16T09:09:54.617345" elapsed="0.155219"/>
+</kw>
+<kw name="Enter Text" owner="CommonKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:54.773293" level="INFO">Typing text 'Pre-condition
+- Existing OT(Future Period 2026) in Approved status and Request type = Compensatory Leave.
+- Need to continue from TC-003
+
+Teststep Description
+HR process in secon time continue from TC-003
+1. Click Time Off menu
+2. Click Mass Leaves Allocation
+3. Click Allocate Compensatory Leave
+4. Click Add a line for select the employee
+5. Click Allocate Compensatory Leave
+
+Employee, OT requester
+6. Click ESS menu.
+7. Click Leave Request.
+8. Click New
+9. Verify Time Off Type * Compensatory leave
+
+Expected Result
+HR
+4. The system will show the list of employees with OT in Approved status and Request type = Compensatory Leave.
+5. The system will not create a new Mass Leave Allocation. The system will add name into existing Mass Leave Allocation(Compensatory Leave 2025).
+
+Employee, OT requester
+9. The total value of Compensatory Leave is updated depending on OT hours.' into text field 'xpath=//p[@class='is-empty is-editor-empty']'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:54.773083" elapsed="1.205925"/>
+</kw>
+<arg>${descD}</arg>
+<arg>${testcase_description}</arg>
+<status status="PASS" start="2025-01-16T09:09:54.772764" elapsed="1.207052"/>
+</kw>
+<kw name="Wait until page contain element tag" owner="CommonKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${tagxpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-16T09:09:55.980710" elapsed="0.030103"/>
+</kw>
+<arg>${statusTestcase}</arg>
+<status status="PASS" start="2025-01-16T09:09:55.980185" elapsed="0.030862"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:56.012461" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:56.012036" elapsed="0.041936"/>
+</kw>
+<arg>${statusTestcase}</arg>
+<status status="PASS" start="2025-01-16T09:09:56.011484" elapsed="0.043003"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:56.055699" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:56.055374" elapsed="0.042490"/>
+</kw>
+<arg>${selectStatus}</arg>
+<status status="PASS" start="2025-01-16T09:09:56.054854" elapsed="0.043272"/>
+</kw>
+<kw name="Click element tag" owner="CommonKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-16T09:09:56.099088" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-16T09:09:56.098849" elapsed="0.050731"/>
+</kw>
+<arg>${createbtn}</arg>
+<status status="PASS" start="2025-01-16T09:09:56.098427" elapsed="0.051388"/>
+</kw>
+<arg>testcase_title=TC-004: To verify the allocation of Compensatory Leave from OT in the case of the second time onward in the year(2026).</arg>
+<arg>testcase_description=Pre-condition
+- Existing OT(Future Period 2026) in Approved status and Request type = Compensatory Leave.
+- Need to continue from TC-003
+
+Teststep Description
+HR process in secon time continue from TC-003
+1. Click Time Off menu
+2. Click Mass Leaves Allocation
+3. Click Allocate Compensatory Leave
+4. Click Add a line for select the employee
+5. Click Allocate Compensatory Leave
+
+Employee, OT requester
+6. Click ESS menu.
+7. Click Leave Request.
+8. Click New
+9. Verify Time Off Type * Compensatory leave
+
+Expected Result
+HR
+4. The system will show the list of employees with OT in Approved status and Request type = Compensatory Leave.
+5. The system will not create a new Mass Leave Allocation. The system will add name into existing Mass Leave Allocation(Compensatory Leave 2025).
+
+Employee, OT requester
+9. The total value of Compensatory Leave is updated depending on OT hours.</arg>
+<status status="PASS" start="2025-01-16T09:09:54.338820" elapsed="1.811122"/>
+</kw>
+<doc>สร้าง Test Case จากข้อมูลใน Excel</doc>
+<status status="PASS" start="2025-01-16T09:09:54.337130" elapsed="1.813501"/>
+</test>
+<status status="PASS" start="2025-01-16T09:09:45.297800" elapsed="10.853855"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="importTestcases">importTestcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-16T09:09:51.313128" level="WARN">Multiple tests with name 'Data-Driven Test Case' executed in suite 'importTestcases'.</msg>
+<msg time="2025-01-16T09:09:52.888354" level="WARN">Multiple tests with name 'Data-Driven Test Case' executed in suite 'importTestcases'.</msg>
+<msg time="2025-01-16T09:09:54.336811" level="WARN">Multiple tests with name 'Data-Driven Test Case' executed in suite 'importTestcases'.</msg>
+</errors>
+</robot>

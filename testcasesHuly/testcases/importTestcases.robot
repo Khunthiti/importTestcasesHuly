@@ -24,12 +24,12 @@ Setup Browser
 Create Test via automate
     [Arguments]    ${testcase_title}    ${testcase_description}
     #--- Step for create test cases ---#
-    CommonKeywords.Click element tag                                     xpath=//span[text()='New test case']
-    CommonKeywords.Enter Title                                           ${titleD}       ${testcase_title}
-    CommonKeywords.Enter Description                                     ${descD}        ${testcase_description}
-    CommonKeywords.Wait until page contain element tag                   ${statusTestcase}
+    CommonKeywords.Click element tag                            xpath=//span[text()='New test case']
+    CommonKeywords.Enter Text                                   ${titleD}       ${testcase_title}
+    CommonKeywords.Enter Text                                   ${descD}        ${testcase_description}
+    CommonKeywords.Wait until page contain element tag          ${statusTestcase}
     #--- Step for add the test cases status ---#
-    CommonKeywords.Click element tag                                     ${statusTestcase}
-    CommonKeywords.Click element tag                                     ${selectStatus}
+    CommonKeywords.Click element tag                            ${statusTestcase}
+    CommonKeywords.Click element tag                            ${selectStatus}
     #--- Step for click create button ---#
-    CommonKeywords.Click element tag                                     ${createbtn}
+    CommonKeywords.Click element tag                            ${createbtn}
