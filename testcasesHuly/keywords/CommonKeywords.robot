@@ -1,6 +1,5 @@
 *** Settings ***
 Library             SeleniumLibrary
-Resource            ../resources/testdata/testdata.robot
 *** Keywords ***
 Wait until element is ready then click element
     [Arguments]    ${locator}

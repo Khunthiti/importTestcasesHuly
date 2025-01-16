@@ -23,19 +23,13 @@ Setup Browser
 
 Create Test via automate
     [Arguments]    ${testcase_title}    ${testcase_description}
-    #CommonKeywords.Click element tag                                    xpath=//button[@draggable='false']//span[contains(text(), 'Test library')]
-    CommonKeywords.Click element tag                                    xpath=//span[text()='New test case']
-    #CommonKeywords.Click element tag                                    xpath=//button[contains(@class, 'antiButton') and @id='space.selector']
-    #CommonKeywords.Wait until page contain element tag                  xpath=//span[contains(text(), '${projectNameTC}')]
-    #CommonKeywords.Click element tag                                    xpath=//span[contains(text(), '${projectNameTC}')]
-    #CommonKeywords.Click element tag                                    xpath=//button[contains(@class, 'antiButton')]//span//div[text()='No test suite']
-    #CommonKeywords.Wait until page contain element tag                  xpath=//div[@class='flex-presenter']//span[text()='${testSuiteTC}']
-    #CommonKeywords.Click element tag                                    xpath=//div[@class='flex-presenter']//span[text()='${testSuiteTC}']
-    #Log To Console                                                       ${testcase_title} : ${testcase_description}
+    #--- Step for create test cases ---#
+    CommonKeywords.Click element tag                                     xpath=//span[text()='New test case']
     CommonKeywords.Enter Title                                           ${titleD}       ${testcase_title}
     CommonKeywords.Enter Description                                     ${descD}        ${testcase_description}
-    CommonKeywords.Wait until page contain element tag                   ${createbtn}
+    CommonKeywords.Wait until page contain element tag                   ${statusTestcase}
+    #--- Step for add the test cases status ---#
     CommonKeywords.Click element tag                                     ${statusTestcase}
-    #CommonKeywords.Wait until page contain element tag                   ${selectStatus}
     CommonKeywords.Click element tag                                     ${selectStatus}
+    #--- Step for click create button ---#
     CommonKeywords.Click element tag                                     ${createbtn}
