@@ -10,9 +10,6 @@ ${descD}            xpath=//p[@class='is-empty is-editor-empty']
 ${createbtn}        xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']
 ${statusTestcase}   xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]
 ${selectStatus}     xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]
-${projectNameTC}    For Robot
-${testSuiteTC}      For Manual
-${createbtn}        //span[text()='Create']
 
 *** Keywords ***
 Open And Maximize Browser

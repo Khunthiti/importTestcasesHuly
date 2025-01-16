@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-16T09:09:45.293841" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-16T09:15:16.207021" rpa="false" schemaversion="5">
 <suite id="s1" name="importTestcases" source="c:\Users\Thiti\Documents\GitHub\importTestcasesHuly\testcasesHuly\testcases\importTestcases.robot">
 <kw name="Setup Browser" type="SETUP">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-01-16T09:09:46.117307" level="INFO">${ChromeOptions} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000024BF010E660&gt;</msg>
+<msg time="2025-01-16T09:15:16.931343" level="INFO">${ChromeOptions} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000016CD503E660&gt;</msg>
 <var>${ChromeOptions}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys,selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-01-16T09:09:46.116610" elapsed="0.003534"/>
+<status status="PASS" start="2025-01-16T09:15:16.931030" elapsed="0.002547"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${ChromeOptions}</arg>
@@ -16,75 +16,75 @@
 <arg>debuggerAddress</arg>
 <arg>127.0.0.1:9289</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-01-16T09:09:46.120400" elapsed="0.000360"/>
+<status status="PASS" start="2025-01-16T09:15:16.934063" elapsed="0.000257"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:46.121429" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-16T09:15:16.934982" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <arg>options=${ChromeOptions}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-01-16T09:09:46.121182" elapsed="0.729533"/>
+<status status="PASS" start="2025-01-16T09:15:16.934695" elapsed="0.649439"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:46.851144" level="INFO">Opening url 'https://huly.incubate.apps.changan.co.th/workbench/it/testManagement/677e18a510ffbb18b65bf7b8/library?attachedTo=677e27420fcfb423a1c1cf93'</msg>
+<msg time="2025-01-16T09:15:17.584531" level="INFO">Opening url 'https://huly.incubate.apps.changan.co.th/workbench/it/testManagement/677e18a510ffbb18b65bf7b8/library?attachedTo=677e27420fcfb423a1c1cf93'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-01-16T09:09:46.850947" elapsed="0.722117"/>
+<status status="PASS" start="2025-01-16T09:15:17.584342" elapsed="0.115660"/>
 </kw>
 <kw name="Wait until page contains element then verify text" owner="CommonKeywords">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:47.809559" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-01-16T09:09:47.809873" level="FAIL">Page should have contained text 'Test Management' but did not.</msg>
+<msg time="2025-01-16T09:15:17.929420" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-16T09:15:17.929678" level="FAIL">Page should have contained text 'Test Management' but did not.</msg>
 <arg>${expected_text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="FAIL" start="2025-01-16T09:09:47.574048" elapsed="0.238282">Page should have contained text 'Test Management' but did not.</status>
+<status status="FAIL" start="2025-01-16T09:15:17.701260" elapsed="0.230220">Page should have contained text 'Test Management' but did not.</status>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:49.832396" level="INFO">Current page contains text 'Test Management'.</msg>
+<msg time="2025-01-16T09:15:19.987016" level="INFO">Current page contains text 'Test Management'.</msg>
 <arg>${expected_text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-01-16T09:09:49.813634" elapsed="0.018918"/>
+<status status="PASS" start="2025-01-16T09:15:19.932444" elapsed="0.054728"/>
 </kw>
 <arg>5x</arg>
 <arg>2s</arg>
 <arg>Page Should Contain</arg>
 <arg>${expected_text}</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-01-16T09:09:47.573786" elapsed="2.258857"/>
+<status status="PASS" start="2025-01-16T09:15:17.700909" elapsed="2.286359"/>
 </kw>
 <arg>${expected_text}</arg>
-<status status="PASS" start="2025-01-16T09:09:47.573423" elapsed="2.259298"/>
+<status status="PASS" start="2025-01-16T09:15:17.700488" elapsed="2.286854"/>
 </kw>
-<status status="PASS" start="2025-01-16T09:09:46.115440" elapsed="3.717357"/>
+<status status="PASS" start="2025-01-16T09:15:16.930391" elapsed="3.057021"/>
 </kw>
 <test id="s1-t1" name="Data-Driven Test Case" line="11">
 <kw name="Create Test via automate">
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:49.835025" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
+<msg time="2025-01-16T09:15:19.989147" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:49.834719" elapsed="0.074164"/>
+<status status="PASS" start="2025-01-16T09:15:19.988905" elapsed="0.083117"/>
 </kw>
 <arg>xpath=//span[text()='New test case']</arg>
-<status status="PASS" start="2025-01-16T09:09:49.834467" elapsed="0.074619"/>
+<status status="PASS" start="2025-01-16T09:15:19.988727" elapsed="0.083481"/>
 </kw>
 <kw name="Enter Text" owner="CommonKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:49.909799" level="INFO">Typing text 'TC-001: To verify the allocation of Compensatory Leave from OT in the case of the first time in the year(2025).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
+<msg time="2025-01-16T09:15:20.072888" level="INFO">Typing text 'TC-001: To verify the allocation of Compensatory Leave from OT in the case of the first time in the year(2025).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:49.909600" elapsed="0.218958"/>
+<status status="PASS" start="2025-01-16T09:15:20.072694" elapsed="0.173019"/>
 </kw>
 <arg>${titleD}</arg>
 <arg>${testcase_title}</arg>
-<status status="PASS" start="2025-01-16T09:09:49.909274" elapsed="0.219484"/>
+<status status="PASS" start="2025-01-16T09:15:20.072390" elapsed="0.173493"/>
 </kw>
 <kw name="Enter Text" owner="CommonKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:50.129441" level="INFO">Typing text 'Pre-condition
+<msg time="2025-01-16T09:15:20.246511" level="INFO">Typing text 'Pre-condition
 - Existing OT(Current Period 2025) in Approved status and Request type = Compensatory Leave.
 
 Teststep Description
@@ -111,50 +111,50 @@ Employee, OT requester
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:50.129256" elapsed="1.006822"/>
+<status status="PASS" start="2025-01-16T09:15:20.246337" elapsed="0.987877"/>
 </kw>
 <arg>${descD}</arg>
 <arg>${testcase_description}</arg>
-<status status="PASS" start="2025-01-16T09:09:50.128949" elapsed="1.007419"/>
+<status status="PASS" start="2025-01-16T09:15:20.246050" elapsed="0.988458"/>
 </kw>
 <kw name="Wait until page contain element tag" owner="CommonKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${tagxpath}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-16T09:09:51.137167" elapsed="0.032598"/>
+<status status="PASS" start="2025-01-16T09:15:21.235240" elapsed="0.026974"/>
 </kw>
 <arg>${statusTestcase}</arg>
-<status status="PASS" start="2025-01-16T09:09:51.136669" elapsed="0.033339"/>
+<status status="PASS" start="2025-01-16T09:15:21.234777" elapsed="0.027607"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:51.170881" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
+<msg time="2025-01-16T09:15:21.262952" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:51.170643" elapsed="0.046345"/>
+<status status="PASS" start="2025-01-16T09:15:21.262796" elapsed="0.037996"/>
 </kw>
 <arg>${statusTestcase}</arg>
-<status status="PASS" start="2025-01-16T09:09:51.170258" elapsed="0.046994"/>
+<status status="PASS" start="2025-01-16T09:15:21.262552" elapsed="0.038403"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:51.218261" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
+<msg time="2025-01-16T09:15:21.301574" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:51.218000" elapsed="0.048594"/>
+<status status="PASS" start="2025-01-16T09:15:21.301402" elapsed="0.039690"/>
 </kw>
 <arg>${selectStatus}</arg>
-<status status="PASS" start="2025-01-16T09:09:51.217548" elapsed="0.049331"/>
+<status status="PASS" start="2025-01-16T09:15:21.301135" elapsed="0.040199"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:51.267885" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
+<msg time="2025-01-16T09:15:21.342158" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:51.267606" elapsed="0.043338"/>
+<status status="PASS" start="2025-01-16T09:15:21.341937" elapsed="0.042930"/>
 </kw>
 <arg>${createbtn}</arg>
-<status status="PASS" start="2025-01-16T09:09:51.267156" elapsed="0.044023"/>
+<status status="PASS" start="2025-01-16T09:15:21.341562" elapsed="0.043524"/>
 </kw>
 <arg>testcase_title=TC-001: To verify the allocation of Compensatory Leave from OT in the case of the first time in the year(2025).</arg>
 <arg>testcase_description=Pre-condition
@@ -181,38 +181,38 @@ HR
 
 Employee, OT requester
 9. The total value of Compensatory Leave is updated depending on OT hours.</arg>
-<status status="PASS" start="2025-01-16T09:09:49.834124" elapsed="1.477492"/>
+<status status="PASS" start="2025-01-16T09:15:19.988470" elapsed="1.396944"/>
 </kw>
 <doc>สร้าง Test Case จากข้อมูลใน Excel</doc>
-<status status="PASS" start="2025-01-16T09:09:49.832887" elapsed="1.479348"/>
+<status status="PASS" start="2025-01-16T09:15:19.987494" elapsed="1.398708"/>
 </test>
 <test id="s1-t2" name="Data-Driven Test Case" line="11">
 <kw name="Create Test via automate">
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:51.317675" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
+<msg time="2025-01-16T09:15:21.392170" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:51.317299" elapsed="0.124146"/>
+<status status="PASS" start="2025-01-16T09:15:21.391910" elapsed="0.234638"/>
 </kw>
 <arg>xpath=//span[text()='New test case']</arg>
-<status status="PASS" start="2025-01-16T09:09:51.316870" elapsed="0.124766"/>
+<status status="PASS" start="2025-01-16T09:15:21.391537" elapsed="0.235300"/>
 </kw>
 <kw name="Enter Text" owner="CommonKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:51.442417" level="INFO">Typing text 'TC-002: To verify the allocation of Compensatory Leave from OT in the case of the second time onward in the year(2025).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
+<msg time="2025-01-16T09:15:21.627906" level="INFO">Typing text 'TC-002: To verify the allocation of Compensatory Leave from OT in the case of the second time onward in the year(2025).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:51.442118" elapsed="0.154529"/>
+<status status="PASS" start="2025-01-16T09:15:21.627627" elapsed="0.124624"/>
 </kw>
 <arg>${titleD}</arg>
 <arg>${testcase_title}</arg>
-<status status="PASS" start="2025-01-16T09:09:51.441829" elapsed="0.155653"/>
+<status status="PASS" start="2025-01-16T09:15:21.627158" elapsed="0.125645"/>
 </kw>
 <kw name="Enter Text" owner="CommonKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:51.598711" level="INFO">Typing text 'Pre-condition
+<msg time="2025-01-16T09:15:21.754535" level="INFO">Typing text 'Pre-condition
 - Existing OT(Current Period 2025) in Approved status and Request type = Compensatory Leave.
 - Need to continue from TC-001
 
@@ -240,50 +240,50 @@ Employee, OT requester
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:51.598439" elapsed="1.145257"/>
+<status status="PASS" start="2025-01-16T09:15:21.754327" elapsed="1.114352"/>
 </kw>
 <arg>${descD}</arg>
 <arg>${testcase_description}</arg>
-<status status="PASS" start="2025-01-16T09:09:51.597921" elapsed="1.146076"/>
+<status status="PASS" start="2025-01-16T09:15:21.753675" elapsed="1.115339"/>
 </kw>
 <kw name="Wait until page contain element tag" owner="CommonKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${tagxpath}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-16T09:09:52.745220" elapsed="0.015487"/>
+<status status="PASS" start="2025-01-16T09:15:22.869853" elapsed="0.010817"/>
 </kw>
 <arg>${statusTestcase}</arg>
-<status status="PASS" start="2025-01-16T09:09:52.744553" elapsed="0.016391"/>
+<status status="PASS" start="2025-01-16T09:15:22.869438" elapsed="0.011461"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:52.761862" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
+<msg time="2025-01-16T09:15:22.881787" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:52.761627" elapsed="0.043409"/>
+<status status="PASS" start="2025-01-16T09:15:22.881551" elapsed="0.037261"/>
 </kw>
 <arg>${statusTestcase}</arg>
-<status status="PASS" start="2025-01-16T09:09:52.761210" elapsed="0.044062"/>
+<status status="PASS" start="2025-01-16T09:15:22.881152" elapsed="0.037986"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:52.806418" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
+<msg time="2025-01-16T09:15:22.919841" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:52.806153" elapsed="0.043489"/>
+<status status="PASS" start="2025-01-16T09:15:22.919619" elapsed="0.040823"/>
 </kw>
 <arg>${selectStatus}</arg>
-<status status="PASS" start="2025-01-16T09:09:52.805514" elapsed="0.044420"/>
+<status status="PASS" start="2025-01-16T09:15:22.919343" elapsed="0.041263"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:52.851016" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
+<msg time="2025-01-16T09:15:22.961176" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:52.850748" elapsed="0.035629"/>
+<status status="PASS" start="2025-01-16T09:15:22.961030" elapsed="0.051320"/>
 </kw>
 <arg>${createbtn}</arg>
-<status status="PASS" start="2025-01-16T09:09:52.850290" elapsed="0.036418"/>
+<status status="PASS" start="2025-01-16T09:15:22.960768" elapsed="0.051817"/>
 </kw>
 <arg>testcase_title=TC-002: To verify the allocation of Compensatory Leave from OT in the case of the second time onward in the year(2025).</arg>
 <arg>testcase_description=Pre-condition
@@ -311,38 +311,38 @@ HR
 
 Employee, OT requester
 9. The total value of Compensatory Leave is updated depending on OT hours.</arg>
-<status status="PASS" start="2025-01-16T09:09:51.316137" elapsed="1.570934"/>
+<status status="PASS" start="2025-01-16T09:15:21.391052" elapsed="1.621679"/>
 </kw>
 <doc>สร้าง Test Case จากข้อมูลใน Excel</doc>
-<status status="PASS" start="2025-01-16T09:09:51.313439" elapsed="1.574145"/>
+<status status="PASS" start="2025-01-16T09:15:21.388826" elapsed="1.624486"/>
 </test>
 <test id="s1-t3" name="Data-Driven Test Case" line="11">
 <kw name="Create Test via automate">
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:52.891225" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
+<msg time="2025-01-16T09:15:23.016598" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:52.890998" elapsed="0.114378"/>
+<status status="PASS" start="2025-01-16T09:15:23.016455" elapsed="0.127390"/>
 </kw>
 <arg>xpath=//span[text()='New test case']</arg>
-<status status="PASS" start="2025-01-16T09:09:52.890629" elapsed="0.115052"/>
+<status status="PASS" start="2025-01-16T09:15:23.016257" elapsed="0.127824"/>
 </kw>
 <kw name="Enter Text" owner="CommonKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:53.007014" level="INFO">Typing text 'TC-003: To verify the allocation of Compensatory Leave from OT in the case of the first time in the year(2026).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
+<msg time="2025-01-16T09:15:23.145344" level="INFO">Typing text 'TC-003: To verify the allocation of Compensatory Leave from OT in the case of the first time in the year(2026).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:53.006474" elapsed="0.148456"/>
+<status status="PASS" start="2025-01-16T09:15:23.144819" elapsed="0.115848"/>
 </kw>
 <arg>${titleD}</arg>
 <arg>${testcase_title}</arg>
-<status status="PASS" start="2025-01-16T09:09:53.005963" elapsed="0.149164"/>
+<status status="PASS" start="2025-01-16T09:15:23.144321" elapsed="0.116698"/>
 </kw>
 <kw name="Enter Text" owner="CommonKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:53.155766" level="INFO">Typing text 'Pre-condition
+<msg time="2025-01-16T09:15:23.262445" level="INFO">Typing text 'Pre-condition
 - Existing OT(Future Period 2026) in Approved status and Request type = Compensatory Leave.
 
 Teststep Description
@@ -369,50 +369,50 @@ Employee, OT requester
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:53.155603" elapsed="0.999646"/>
+<status status="PASS" start="2025-01-16T09:15:23.261734" elapsed="1.004099"/>
 </kw>
 <arg>${descD}</arg>
 <arg>${testcase_description}</arg>
-<status status="PASS" start="2025-01-16T09:09:53.155297" elapsed="1.000208"/>
+<status status="PASS" start="2025-01-16T09:15:23.261419" elapsed="1.004642"/>
 </kw>
 <kw name="Wait until page contain element tag" owner="CommonKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${tagxpath}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-16T09:09:54.156191" elapsed="0.013424"/>
+<status status="PASS" start="2025-01-16T09:15:24.266545" elapsed="0.011917"/>
 </kw>
 <arg>${statusTestcase}</arg>
-<status status="PASS" start="2025-01-16T09:09:54.155766" elapsed="0.014152"/>
+<status status="PASS" start="2025-01-16T09:15:24.266233" elapsed="0.012451"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:54.170895" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
+<msg time="2025-01-16T09:15:24.279513" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:54.170657" elapsed="0.044739"/>
+<status status="PASS" start="2025-01-16T09:15:24.279294" elapsed="0.050823"/>
 </kw>
 <arg>${statusTestcase}</arg>
-<status status="PASS" start="2025-01-16T09:09:54.170210" elapsed="0.045492"/>
+<status status="PASS" start="2025-01-16T09:15:24.278923" elapsed="0.051564"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:54.217182" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
+<msg time="2025-01-16T09:15:24.331370" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:54.216877" elapsed="0.040796"/>
+<status status="PASS" start="2025-01-16T09:15:24.331143" elapsed="0.039568"/>
 </kw>
 <arg>${selectStatus}</arg>
-<status status="PASS" start="2025-01-16T09:09:54.216240" elapsed="0.041666"/>
+<status status="PASS" start="2025-01-16T09:15:24.330743" elapsed="0.040215"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:54.258767" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
+<msg time="2025-01-16T09:15:24.371887" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:54.258539" elapsed="0.076469"/>
+<status status="PASS" start="2025-01-16T09:15:24.371648" elapsed="0.032345"/>
 </kw>
 <arg>${createbtn}</arg>
-<status status="PASS" start="2025-01-16T09:09:54.258153" elapsed="0.077093"/>
+<status status="PASS" start="2025-01-16T09:15:24.371246" elapsed="0.032973"/>
 </kw>
 <arg>testcase_title=TC-003: To verify the allocation of Compensatory Leave from OT in the case of the first time in the year(2026).</arg>
 <arg>testcase_description=Pre-condition
@@ -439,38 +439,38 @@ HR
 
 Employee, OT requester
 9. The total value of Compensatory Leave is updated depending on OT hours.</arg>
-<status status="PASS" start="2025-01-16T09:09:52.890179" elapsed="1.445205"/>
+<status status="PASS" start="2025-01-16T09:15:23.015977" elapsed="1.388370"/>
 </kw>
 <doc>สร้าง Test Case จากข้อมูลใน Excel</doc>
-<status status="PASS" start="2025-01-16T09:09:52.888670" elapsed="1.447300"/>
+<status status="PASS" start="2025-01-16T09:15:23.014963" elapsed="1.390005"/>
 </test>
 <test id="s1-t4" name="Data-Driven Test Case" line="11">
 <kw name="Create Test via automate">
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:54.339946" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
+<msg time="2025-01-16T09:15:24.407629" level="INFO">Clicking element 'xpath=//span[text()='New test case']'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:54.339688" elapsed="0.277116"/>
+<status status="PASS" start="2025-01-16T09:15:24.407487" elapsed="0.125280"/>
 </kw>
 <arg>xpath=//span[text()='New test case']</arg>
-<status status="PASS" start="2025-01-16T09:09:54.339329" elapsed="0.277746"/>
+<status status="PASS" start="2025-01-16T09:15:24.407300" elapsed="0.125680"/>
 </kw>
 <kw name="Enter Text" owner="CommonKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:54.618066" level="INFO">Typing text 'TC-004: To verify the allocation of Compensatory Leave from OT in the case of the second time onward in the year(2026).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
+<msg time="2025-01-16T09:15:24.533617" level="INFO">Typing text 'TC-004: To verify the allocation of Compensatory Leave from OT in the case of the second time onward in the year(2026).' into text field 'xpath=//input[@type='text' and @placeholder='Test case title']'.</msg>
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:54.617800" elapsed="0.154551"/>
+<status status="PASS" start="2025-01-16T09:15:24.533435" elapsed="0.138269"/>
 </kw>
 <arg>${titleD}</arg>
 <arg>${testcase_title}</arg>
-<status status="PASS" start="2025-01-16T09:09:54.617345" elapsed="0.155219"/>
+<status status="PASS" start="2025-01-16T09:15:24.533154" elapsed="0.138827"/>
 </kw>
 <kw name="Enter Text" owner="CommonKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:54.773293" level="INFO">Typing text 'Pre-condition
+<msg time="2025-01-16T09:15:24.672613" level="INFO">Typing text 'Pre-condition
 - Existing OT(Future Period 2026) in Approved status and Request type = Compensatory Leave.
 - Need to continue from TC-003
 
@@ -498,50 +498,50 @@ Employee, OT requester
 <arg>${locator}</arg>
 <arg>${text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:54.773083" elapsed="1.205925"/>
+<status status="PASS" start="2025-01-16T09:15:24.672436" elapsed="1.190424"/>
 </kw>
 <arg>${descD}</arg>
 <arg>${testcase_description}</arg>
-<status status="PASS" start="2025-01-16T09:09:54.772764" elapsed="1.207052"/>
+<status status="PASS" start="2025-01-16T09:15:24.672158" elapsed="1.190997"/>
 </kw>
 <kw name="Wait until page contain element tag" owner="CommonKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${tagxpath}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-16T09:09:55.980710" elapsed="0.030103"/>
+<status status="PASS" start="2025-01-16T09:15:25.864189" elapsed="0.041433"/>
 </kw>
 <arg>${statusTestcase}</arg>
-<status status="PASS" start="2025-01-16T09:09:55.980185" elapsed="0.030862"/>
+<status status="PASS" start="2025-01-16T09:15:25.863728" elapsed="0.042128"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:56.012461" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
+<msg time="2025-01-16T09:15:25.906772" level="INFO">Clicking element 'xpath=//button[contains(@class, 'antiButton') and span[text()='Draft']]'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:56.012036" elapsed="0.041936"/>
+<status status="PASS" start="2025-01-16T09:15:25.906513" elapsed="0.040267"/>
 </kw>
 <arg>${statusTestcase}</arg>
-<status status="PASS" start="2025-01-16T09:09:56.011484" elapsed="0.043003"/>
+<status status="PASS" start="2025-01-16T09:15:25.906106" elapsed="0.040969"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:56.055699" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
+<msg time="2025-01-16T09:15:25.948302" level="INFO">Clicking element 'xpath=//button[@class='menu-item withList w-full' and .//span[text()='Approved']]'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:56.055374" elapsed="0.042490"/>
+<status status="PASS" start="2025-01-16T09:15:25.948009" elapsed="0.042992"/>
 </kw>
 <arg>${selectStatus}</arg>
-<status status="PASS" start="2025-01-16T09:09:56.054854" elapsed="0.043272"/>
+<status status="PASS" start="2025-01-16T09:15:25.947333" elapsed="0.043896"/>
 </kw>
 <kw name="Click element tag" owner="CommonKeywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-16T09:09:56.099088" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
+<msg time="2025-01-16T09:15:25.992064" level="INFO">Clicking element 'xpath=//button[@class='antiButton primary large jf-center sh-no-shape bs-solid gap-medium']'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-16T09:09:56.098849" elapsed="0.050731"/>
+<status status="PASS" start="2025-01-16T09:15:25.991841" elapsed="0.038788"/>
 </kw>
 <arg>${createbtn}</arg>
-<status status="PASS" start="2025-01-16T09:09:56.098427" elapsed="0.051388"/>
+<status status="PASS" start="2025-01-16T09:15:25.991460" elapsed="0.039412"/>
 </kw>
 <arg>testcase_title=TC-004: To verify the allocation of Compensatory Leave from OT in the case of the second time onward in the year(2026).</arg>
 <arg>testcase_description=Pre-condition
@@ -569,12 +569,12 @@ HR
 
 Employee, OT requester
 9. The total value of Compensatory Leave is updated depending on OT hours.</arg>
-<status status="PASS" start="2025-01-16T09:09:54.338820" elapsed="1.811122"/>
+<status status="PASS" start="2025-01-16T09:15:24.407047" elapsed="1.623953"/>
 </kw>
 <doc>สร้าง Test Case จากข้อมูลใน Excel</doc>
-<status status="PASS" start="2025-01-16T09:09:54.337130" elapsed="1.813501"/>
+<status status="PASS" start="2025-01-16T09:15:24.406162" elapsed="1.625443"/>
 </test>
-<status status="PASS" start="2025-01-16T09:09:45.297800" elapsed="10.853855"/>
+<status status="PASS" start="2025-01-16T09:15:16.210354" elapsed="9.822338"/>
 </suite>
 <statistics>
 <total>
@@ -587,8 +587,8 @@ Employee, OT requester
 </suite>
 </statistics>
 <errors>
-<msg time="2025-01-16T09:09:51.313128" level="WARN">Multiple tests with name 'Data-Driven Test Case' executed in suite 'importTestcases'.</msg>
-<msg time="2025-01-16T09:09:52.888354" level="WARN">Multiple tests with name 'Data-Driven Test Case' executed in suite 'importTestcases'.</msg>
-<msg time="2025-01-16T09:09:54.336811" level="WARN">Multiple tests with name 'Data-Driven Test Case' executed in suite 'importTestcases'.</msg>
+<msg time="2025-01-16T09:15:21.387980" level="WARN">Multiple tests with name 'Data-Driven Test Case' executed in suite 'importTestcases'.</msg>
+<msg time="2025-01-16T09:15:23.014593" level="WARN">Multiple tests with name 'Data-Driven Test Case' executed in suite 'importTestcases'.</msg>
+<msg time="2025-01-16T09:15:24.405883" level="WARN">Multiple tests with name 'Data-Driven Test Case' executed in suite 'importTestcases'.</msg>
 </errors>
 </robot>
