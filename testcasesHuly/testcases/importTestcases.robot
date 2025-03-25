@@ -8,7 +8,7 @@ Suite Setup         Setup Browser
 Test Template       Create Test via automate
 
 
-#saad
+#---Test Cases detail---#
 *** Test Cases ***
 Data-Driven Test Case
     [Documentation]  สร้าง Test Case จากข้อมูลใน Excel
