@@ -16,6 +16,7 @@ Data-Driven Test Case
     Create Test via automate    ${testcase_title}    ${testcase_description}
 
 *** Keywords ***
+#Using existing browser#
 Setup Browser
     ${ChromeOptions}=     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()  sys,selenium.webdriver
     Call Method    ${ChromeOptions}    add_experimental_option    debuggerAddress    127.0.0.1:9289
