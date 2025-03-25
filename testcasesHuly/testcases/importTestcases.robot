@@ -28,6 +28,7 @@ Create Test via automate
     #--- Step for create test cases ---#
     CommonKeywords.Click element tag                            xpath=//span[text()='New test case']
     CommonKeywords.Enter Text                                   ${titleD}       ${testcase_title}
+    CommonKeywords.Wait until page contain element tag          ${descD}
     CommonKeywords.Enter Text                                   ${descD}        ${testcase_description}
     CommonKeywords.Wait until page contain element tag          ${statusTestcase}
     #--- Step for add the test cases status ---#
