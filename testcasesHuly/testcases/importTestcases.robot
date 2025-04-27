@@ -24,6 +24,11 @@ Setup Browser
     Go To    ${baseUrl}
     Wait until page contains element then verify text    ${expected_text}
 
+#CMD: "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9289 --user-data-dir="C:\chrome-debug"
+
+
+
+
 Create Test via automate
     [Arguments]    ${testcase_title}    ${testcase_description}
     #--- Step for create test cases ---#
